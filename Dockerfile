@@ -8,6 +8,8 @@ RUN curl -sSL https://sdk.cloud.google.com | bash
 ENV PATH $PATH:/root/google-cloud-sdk/bin
 RUN gcloud components install kubectl
 
+RUN npm install -g @angular/cli
+
 RUN GIT_TAG="v1.3.1" \
     && go get -d -u github.com/golang/protobuf/protoc-gen-go \
     && git -C "$(go env GOPATH)"/src/github.com/golang/protobuf checkout $GIT_TAG \
