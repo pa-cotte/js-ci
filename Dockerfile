@@ -9,6 +9,7 @@ ENV PATH $PATH:/root/google-cloud-sdk/bin
 RUN gcloud components install kubectl
 
 RUN npm install -g @angular/cli
+RUN npm install -g firebase-tools
 
 RUN GIT_TAG="v1.3.1" \
     && go get -d -u github.com/golang/protobuf/protoc-gen-go \
